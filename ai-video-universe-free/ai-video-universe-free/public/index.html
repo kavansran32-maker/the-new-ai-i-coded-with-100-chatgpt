@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Video Universe — Free Studio</title>
+<style>
+:root{color-scheme:dark;--bg:#090a10;--panel:#131520;--line:#292d40;--text:#f4f5fb;--muted:#9da3b8;--accent:#9b80ff;--green:#7be0b6}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% -10%,#292047,transparent 40%),var(--bg);color:var(--text);font:15px/1.5 system-ui,Arial,sans-serif}
+header{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4vw;background:#0d0e16}
+.brand{font-weight:850;letter-spacing:.4px}.brand span{color:var(--accent)}.free{border:1px solid #28533f;color:var(--green);padding:6px 11px;border-radius:30px;font-size:12px}
+.layout{display:grid;grid-template-columns:210px 1fr;min-height:calc(100vh - 70px)}aside{padding:22px 13px;border-right:1px solid var(--line)}nav button{display:block;width:100%;text-align:left;padding:11px;border:0;background:none;color:#aeb3c6;border-radius:9px;margin:3px 0;cursor:pointer}nav button.active,nav button:hover{background:#282341;color:white}main{padding:clamp(18px,4vw,42px);max-width:1450px;width:100%;margin:auto}.hero{margin-bottom:25px}.eyebrow{color:#b5a1ff;letter-spacing:2px;font-size:10px;font-weight:800}.hero h1{font-size:clamp(28px,4vw,39px);margin:7px 0}.hero p,.muted{color:var(--muted)}.hero p{margin:0}.page{display:none}.page.active{display:block}.cols{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(270px,.8fr);gap:17px}.card{background:linear-gradient(180deg,#161824,#11131c);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}.card h2{font-size:16px;margin:0 0 4px}.sub{font-size:12px;color:var(--muted);margin:0 0 16px}.field{margin:15px 0}.field label{display:block;font-size:12px;font-weight:700;color:#d6d9e8;margin-bottom:7px}input,select,textarea{width:100%;background:#0b0d15;color:white;border:1px solid #34384d;border-radius:9px;padding:11px;font:inherit}textarea{min-height:110px;resize:vertical}input:focus,select:focus,textarea:focus{outline:2px solid #8069dc55;border-color:#9279f4}.row{display:grid;grid-template-columns:1fr 1fr;gap:11px}.btn{border:0;border-radius:9px;background:linear-gradient(135deg,#a28aff,#7457dc);color:white;font-weight:800;padding:12px 15px;cursor:pointer}.btn.secondary{background:#202335;border:1px solid #3a3e54}.btn:disabled{opacity:.55;cursor:wait}.full{width:100%}.hint{font-size:11px;color:#8189a2}.notice{padding:11px;border-radius:9px;background:#201b31;border:1px solid #40345e;color:#cbbfff;font-size:12px;margin:12px 0}.warning{background:#261f14;border-color:#54442b;color:#e5d0a4}.good{background:#14271f;border-color:#28533f;color:#a5e8c8}.upload{border:1px dashed #444961;border-radius:10px;padding:12px;color:var(--muted);font-size:12px}.upload input{margin-top:8px}.output{border:1px dashed #34384c;border-radius:12px;min-height:230px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px}.output video{width:100%;max-height:440px;border-radius:10px}.job{border:1px solid var(--line);background:#10121b;border-radius:11px;padding:12px;margin:10px 0}.jobhead{display:flex;justify-content:space-between;gap:8px}.tag{font-size:10px;border-radius:20px;padding:3px 8px;background:#2c2440;color:#d0c5ff}.tag.done{background:#153126;color:var(--green)}.tag.error{background:#391d27;color:#ff9eae}.job small{color:var(--muted)}.modelgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:11px}.model{border:1px solid var(--line);border-radius:12px;background:#141622;padding:14px}.model h3{font-size:14px;margin:4px 0}.model p{font-size:11px;color:var(--muted);min-height:33px}.model .provider{font-size:10px;color:#b6a4ff;text-transform:uppercase;letter-spacing:1px}.status{font-size:11px;color:#c7cadd}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px}td,th{padding:11px;border-bottom:1px solid var(--line);text-align:left}th{color:#b7bdd1}.empty{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+@media(max-width:850px){.layout{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line);padding:8px;overflow:auto}nav{display:flex;gap:5px}nav button{white-space:nowrap;width:auto}.cols{grid-template-columns:1fr}}
+@media(max-width:520px){main{padding:15px 10px}.card{padding:14px}.row{grid-template-columns:1fr}header{padding:0 14px}}
+</style>
+</head>
+<body>
+<header><div class="brand">✦ <span>AI VIDEO</span> UNIVERSE</div><div class="free">FREE STUDIO · NO CREDITS</div></header>
+<div class="layout">
+<aside><nav>
+<button class="active" data-page="studio">✧ Create video</button>
+<button data-page="history">◷ History</button>
+<button data-page="models">▦ Model library</button>
+<button data-page="compare">⇄ Compare models</button>
+<button data-page="setup">⚙ Free setup</button>
+</nav></aside>
+<main>
+<div class="hero"><div class="eyebrow">OPEN · LOCAL · COMMUNITY MODELS</div><h1>Your video studio, without paywalls.</h1><p>No subscriptions, premium tiers, paid credits, or payment fields in this app. Run compatible open models on your own computer.</p></div>
+
+<section id="page-studio" class="page active">
+<div class="cols">
+<div class="card">
+<h2>Create a video</h2><p class="sub">Select a local model integration and prepare your generation.</p>
+<div class="field"><label for="mode">Generation type</label><select id="mode"><option value="text">Text to video</option><option value="image">Image to video</option><option value="video">Video to video (workflow-dependent)</option></select></div>
+<div class="field"><label for="model">Model catalogue</label><select id="model"></select><div id="modelStatus" class="hint"></div></div>
+<div class="field"><label for="prompt">Prompt</label><textarea id="prompt" placeholder="Describe the video, camera movement, lighting, and visual style..."></textarea></div>
+<div class="field" id="imageField" hidden><label>Starting image</label><div class="upload"><input type="file" id="image" accept="image/png,image/jpeg,image/webp"></div></div>
+<div class="field" id="videoField" hidden><label>Source video</label><div class="upload"><input type="file" id="video" accept="video/mp4,video/webm,video/quicktime"></div></div>
+<div class="row">
+<div class="field"><label for="ratio">Aspect ratio</label><select id="ratio"><option>16:9</option><option>9:16</option><option>1:1</option><option>4:3</option></select></div>
+<div class="field"><label for="duration">Duration (seconds)</label><input id="duration" type="number" min="1" max="30" value="5"></div>
+</div>
+<div class="row">
+<div class="field"><label for="resolution">Resolution</label><select id="resolution"><option>480p</option><option selected>720p</option><option>1080p</option></select></div>
+<div class="field"><label for="seed">Seed (optional)</label><input id="seed" type="number" placeholder="Random"></div>
+</div>
+<div class="field"><label for="negative">Negative prompt (optional)</label><input id="negative" placeholder="blurry, flickering, low detail"></div>
+<div class="field"><label for="advanced">Extra workflow parameters (JSON, optional)</label><textarea id="advanced" style="min-height:65px" placeholder='{"steps":25}'></textarea></div>
+<button class="btn full" id="generate">✦ Generate locally</button>
+<div id="message" class="notice" hidden></div>
+<div class="notice warning">This free build does not unlock paid proprietary services. Veo, Seedance, Grok, Kling, and Hailuo are listed for reference only unless their owners provide genuinely free access. Local generation needs compatible hardware and model files.</div>
+</div>
+<div>
+<div class="card"><h2>Latest output</h2><p class="sub">Your completed local video appears here.</p><div class="output" id="output">▧<br>No video generated yet</div><div id="download"></div></div>
+<div class="card"><h2>Free mode status</h2><p class="sub">No paid API keys are used.</p><div id="connection" class="notice">Checking local generation connection…</div></div>
+</div>
+</div>
+</section>
+
+<section id="page-history" class="page"><div class="card"><h2>Generation history</h2><p class="sub">Stored in this browser on this device.</p><input id="historySearch" placeholder="Search your history…"><div id="historyList"></div><button id="clearHistory" class="btn secondary">Clear history</button></div></section>
+<section id="page-models" class="page"><div class="card"><h2>Model library</h2><p class="sub">Search all listed models. “Reference only” means this app does not call that proprietary model.</p><input id="modelSearch" placeholder="Search model or provider…" style="margin:12px 0"><div id="modelGrid" class="modelgrid"></div></div></section>
+<section id="page-compare" class="page"><div class="card"><h2>Model comparison</h2><p class="sub">Compare catalogue details. Actual capabilities depend on the installed workflow.</p><div class="row"><div class="field"><label>Model A</label><select id="compareA"></select></div><div class="field"><label>Model B</label><select id="compareB"></select></div></div><div class="tablewrap" id="comparison"></div></div></section>
+<section id="page-setup" class="page"><div class="card"><h2>Free local setup</h2><p class="sub">The app connects to a ComfyUI server running on your own computer. No cloud API keys or paid services are required.</p><div id="setupStatus" class="notice">Checking connection…</div><p>1. Install and run ComfyUI locally with a compatible open video workflow and model.</p><p>2. Export the workflow in API format and save it as <code>workflow.json</code> in this project folder.</p><p>3. Copy <code>.env.example</code> to <code>.env</code>, set <code>COMFYUI_URL</code> and <code>COMFYUI_WORKFLOW</code>, then restart this app.</p><p>4. In <code>workflow.json</code>, use the placeholders <code>__PROMPT__</code>, <code>__NEGATIVE_PROMPT__</code>, and <code>__SEED__</code> in text fields/seed fields you want the server to replace.</p><div class="notice warning">The exact ComfyUI workflow is model-specific. Image-to-video and video-to-video require the matching input nodes and workflow. This project cannot automatically create a compatible workflow for every model.</div></div></section>
+<div class="muted" style="text-align:center;font-size:11px;padding:25px">AI Video Universe · Free local-first starter · No payment or credit system</div>
+</main></div>
+<script>
+const catalog = [
+["Wan 2.2","Wan","Open weights / local","Local workflow adapter; hardware and license conditions apply","local"],
+["Wan 2.1","Wan","Open weights / local","Local workflow adapter; check model license","local"],
+["CogVideoX","THUDM","Open weights / local","Community/local workflows available","local"],
+["LTX Video","Lightricks","Open weights / local","Local workflow adapter; check model variant/license","local"],
+["HunyuanVideo","Tencent","Open weights / local","Local workflow adapter; hardware intensive","local"],
+["Mochi 1","Genmo","Open weights / local","Local workflow adapter; hardware intensive","local"],
+["AnimateDiff","Community","Open weights / local","Animation workflows; not identical to modern video models","local"],
+["Veo 1","Google","Proprietary cloud","Reference only · no free official API promised","reference"],
+["Veo 2","Google","Proprietary cloud","Reference only · no free official API promised","reference"],
+["Veo 3 / 3 Fast","Google","Proprietary cloud","Reference only · provider access and pricing apply","reference"],
+["Seedance 1.x / 2.x / 2.5","ByteDance","Proprietary cloud","Reference only · no free public API assumed","reference"],
+["Kling 1.x / 2.x / 2.6 / 3.x / O1","Kuaishou","Proprietary cloud","Reference only · provider access and pricing apply","reference"],
+["Hailuo 1.x / 2.x / 2.3","MiniMax","Proprietary cloud","Reference only · provider access and pricing apply","reference"],
+["Grok Imagine Video","xAI","Proprietary cloud","Reference only · provider access and pricing apply","reference"],
+["Higgsfield","Higgsfield","Hosted platform","Reference only · service access and pricing vary","reference"],
+["Vidu","ShengShu","Hosted platform","Reference only · service access and pricing vary","reference"],
+["PixVerse","PixVerse","Hosted platform","Reference only · service access and pricing vary","reference"],
+["Gensetsu","Unverified","Unverified","Name/provider needs verification","reference"]
+].map((m,i)=>({id:"m"+i,name:m[0],provider:m[1],type:m[2],description:m[3],kind:m[4]}));
+const $=id=>document.getElementById(id);
+let historyItems=JSON.parse(localStorage.getItem("avu-free-history")||"[]");
+function options(){ $("model").innerHTML=catalog.map(m=>`<option value="${m.id}">${esc(m.name)} — ${m.kind==="local"?"LOCAL OPTION":"REFERENCE ONLY"}</option>`).join("");["compareA","compareB"].forEach(id=>$(id).innerHTML=catalog.map(m=>`<option value="${m.id}">${esc(m.name)}</option>`).join(""));$("compareB").value="m1";}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function selected(){return catalog.find(m=>m.id===$("model").value)||catalog[0]}
+function modelInfo(){const m=selected();$("modelStatus").textContent=m.kind==="local"?"Local model option · requires a matching installed ComfyUI workflow":"Reference entry only · not connected to a free generation API";$("modelStatus").style.color=m.kind==="local"?"#8ee1b9":"#d6bd88";}
+function switchPage(p){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id==="page-"+p));document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===p));if(p==="history")renderHistory();if(p==="models")renderModels();if(p==="compare")renderCompare();}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>switchPage(b.dataset.page));
+$("mode").onchange=()=>{$("imageField").hidden=$("mode").value!=="image";$("videoField").hidden=$("mode").value!=="video";};
+$("model").onchange=modelInfo;
+$("generate").onclick=async()=>{
+ const m=selected(),mode=$("mode").value,prompt=$("prompt").value.trim();
+ if(!prompt){showMessage("Enter a prompt first.");return;}
+ if(m.kind!=="local"){showMessage("This model is listed for reference only. To keep the site completely free, choose a local/open model with a configured workflow.");return;}
+ const file=mode==="image"?$("image").files[0]:mode==="video"?$("video").files[0]:null;
+ if(mode!=="text"&&!file){showMessage("Choose the source "+(mode==="image"?"image":"video")+" first.");return;}
+ let advanced={};try{advanced=$("advanced").value.trim()?JSON.parse($("advanced").value):{};}catch{showMessage("Advanced parameters must be valid JSON.");return;}
+ const fd=new FormData();Object.entries({model:m.name,mode,prompt,negativePrompt:$("negative").value,ratio:$("ratio").value,duration:$("duration").value,resolution:$("resolution").value,seed:$("seed").value,advanced:JSON.stringify(advanced)}).forEach(([k,v])=>fd.append(k,v));if(file)fd.append("source",file);
+ $("generate").disabled=true;showMessage("Submitting to your local ComfyUI server…");
+ try{const r=await fetch("/api/generate",{method:"POST",body:fd});const data=await r.json();if(!r.ok)throw new Error(data.error||"Generation failed.");const item={id:data.id||Date.now().toString(),model:m.name,prompt,status:data.status||"queued",createdAt:new Date().toISOString(),videoUrl:data.videoUrl||null,mode};historyItems.unshift(item);saveHistory();showMessage(data.message||"Job submitted to local generation server.");renderHistory();if(data.videoUrl)showOutput(data.videoUrl);pollJob(item.id);}
+ catch(e){showMessage(e.message);}finally{$("generate").disabled=false;}
+};
+function showMessage(s){$("message").hidden=false;$("message").textContent=s;}
+function showOutput(url){$("output").innerHTML=`<video controls src="${esc(url)}"></video>`;$("download").innerHTML=`<a class="btn secondary" href="${esc(url)}" download="ai-video.mp4">Download MP4</a>`;}
+async function pollJob(id){for(let i=0;i<60;i++){await new Promise(r=>setTimeout(r,3000));try{const r=await fetch("/api/jobs/"+encodeURIComponent(id));if(!r.ok)return;const d=await r.json();const item=historyItems.find(x=>x.id===id);if(item){item.status=d.status;if(d.videoUrl){item.videoUrl=d.videoUrl;showOutput(d.videoUrl);}saveHistory();renderHistory();}if(["completed","failed"].includes(d.status))return;}catch{return;}}}
+function saveHistory(){localStorage.setItem("avu-free-history",JSON.stringify(historyItems.slice(0,100)));}
+function renderHistory(){const q=($("historySearch").value||"").toLowerCase();const list=historyItems.filter(x=>(x.prompt+" "+x.model+" "+x.status).toLowerCase().includes(q));$("historyList").innerHTML=list.length?list.map(x=>`<div class="job"><div class="jobhead"><strong>${esc(x.model)} · ${esc(x.mode||"text")}</strong><span class="tag ${x.status==="completed"?"done":x.status==="failed"?"error":""}">${esc(x.status)}</span></div><p>${esc(x.prompt)}</p><small>${new Date(x.createdAt).toLocaleString()}</small>${x.videoUrl?`<div style="margin-top:8px"><video controls style="width:100%;max-height:260px" src="${esc(x.videoUrl)}"></video><p><a href="${esc(x.videoUrl)}" download="ai-video.mp4">Download MP4</a></p></div>`:""}</div>`).join(""):'<div class="empty">No matching generations yet.</div>';}
+$("historySearch").oninput=renderHistory;$("clearHistory").onclick=()=>{if(confirm("Clear this browser's generation history?")){historyItems=[];saveHistory();renderHistory();}};
+function renderModels(){const q=$("modelSearch").value.toLowerCase();const items=catalog.filter(m=>(m.name+" "+m.provider+" "+m.type).toLowerCase().includes(q));$("modelGrid").innerHTML=items.map(m=>`<div class="model"><div class="provider">${esc(m.provider)}</div><h3>${esc(m.name)}</h3><p>${esc(m.description)}</p><span class="tag ${m.kind==="local"?"done":""}">${m.kind==="local"?"LOCAL OPTION":"REFERENCE ONLY"}</span><p style="min-height:0;margin-top:9px">${esc(m.type)}</p><button class="btn secondary full" style="margin-top:8px" onclick="chooseModel('${m.id}')">Select model</button></div>`).join("")||'<div class="empty">No models found.</div>';}
+window.chooseModel=id=>{$("model").value=id;modelInfo();switchPage("studio");};
+$("modelSearch").oninput=renderModels;
+function renderCompare(){const a=catalog.find(m=>m.id===$("compareA").value),b=catalog.find(m=>m.id===$("compareB").value);$("comparison").innerHTML=`<table><tr><th>Property</th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr><tr><td>Provider</td><td>${esc(a.provider)}</td><td>${esc(b.provider)}</td></tr><tr><td>Access type</td><td>${esc(a.type)}</td><td>${esc(b.type)}</td></tr><tr><td>Free local option in this app</td><td>${a.kind==="local"?"Potentially, with local workflow":"No"}</td><td>${b.kind==="local"?"Potentially, with local workflow":"No"}</td></tr><tr><td>Integration status</td><td>${a.kind==="local"?"ComfyUI workflow required":"Not integrated"}</td><td>${b.kind==="local"?"ComfyUI workflow required":"Not integrated"}</td></tr><tr><td>Notes</td><td>${esc(a.description)}</td><td>${esc(b.description)}</td></tr></table>`;}
+$("compareA").onchange=renderCompare;$("compareB").onchange=renderCompare;
+async function check(){try{const r=await fetch("/api/status");const d=await r.json();$("connection").textContent=d.comfyui?"Connected to local ComfyUI at "+d.comfyuiUrl:"No local ComfyUI connection. Website works in catalogue/demo mode; configure local workflow for generation.";$("setupStatus").textContent=$("connection").textContent;}catch{$("connection").textContent="Backend unavailable. Start the Node.js server.";}}
+options();modelInfo();renderHistory();check();
+</script>
+</body></html>
